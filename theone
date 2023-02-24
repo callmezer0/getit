@@ -1,0 +1,683 @@
+
+1. Create a HTML Program to display college webpage with a HTML table with information such as 
+name, usn, department etc.,
+<html>
+<head>
+<title>HTML 1</title>
+</head>
+<body>
+<!-- this is the first div containing heading tags -->
+<div>
+<h1>Dayananda Sagar College of Engineering</h1>
+<h3>An autonomus college afflitied to VTU</h3>
+</div>
+<hr>
+<!-- this is the 2nd div containg list tags -->
+<div>
+<!-- this sub div contains ul list type -->
+<div>
+<ul>
+<li> <strong>this text is in strong text format</strong> <!-- <b></b> --> </li>
+<li> <em>this is an Emphasized text</em> <!-- <i></i> --> </li>
+<li> <mark>this is a marked text</mark> </li>
+<li> <u>this is a underlined text</u> </li>
+<li> <marquee>this is a moving text</marquee> </li>
+</ul>
+</div>
+3
+<hr>
+<!-- this sub div contains ol list type -->
+<div>
+<ol type="A">
+<li>first</li>
+<li>second</li>
+<li>third</li>
+</ol>
+</div>
+</div>
+<hr>
+<!-- this div contains the table tag -->
+<div>
+<table border="2">
+<tr>
+<th>Name</th>
+<th>Roll number</th>
+<th>blood group</th>
+<th>phone number</th>
+</tr>
+<tr>
+<td>Adarsh</td>
+<td>02</td>
+<td>A<sup>+</sup></td>
+<td>123456789</td> <!-- <sub>+</sub> -->
+</tr>
+4
+<tr>
+<td>Aditya</td>
+<td>03</td>
+<td>B<sup>+</sup></td>
+<td>123456789</td> <!-- <sub>+</sub> -->
+</tr>
+<tr>
+<td>Aishwarya</td>
+<td>04</td>
+<td>O<sub>+</sub></td>
+<td>123456789</td> <!-- <sub>+</sub> -->
+</tr>
+</table>
+</div>
+<hr>
+<!-- this div contains the text tags -->
+<div>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+<br> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non
+</p>
+</div>
+</body>
+</html>
+5
+2. Create a HTML code with 2 WebPages where the first page consists of college name, college photo, 
+logo, about and a button which when clicked takes the user to the previously created student table 
+page
+<html>
+<head>
+<title>HTML 2</title>
+</head>
+<body>
+<!-- this div contains images -->
+<div class="images" id="photos">
+<img src="logo_dsc.png" alt="this is the logo" class="picture" id="logo">
+<img src="DSCE.jpg" alt="building" class="picture" id="dsce_photo">
+</div>
+<hr>
+<!-- this div contains anchor tag -->
+<div>
+<button type="button" onclick="location.href = 'path_to_first_html_file';">
+ Next Page
+</button>
+<ul>
+<li><a href="www.google.com">Google</a></li>
+<li><a href="www.bing.com">Bing</a></li>
+<li><a href="www.duckduckgo.com">duckduckgo</a></li>
+</ul>
+</div>
+<hr>
+6
+<!-- this dib contains form -->
+<div>
+<h2>FORM</h2>
+<form>
+<label for="fname">First name:</label>
+<input type="text" name="fname">
+<label for="lname">Last name:</label>
+<input type="text" name="lname"> <br>
+<input type="radio" id="html" name="lang" value="HTML">
+<label for="html">HTML</label>
+<input type="radio" id="css" name="lang" value="CSS">
+<label for="css">CSS</label>
+<input type="radio" id="javascript" name="lang" value="JavaScript">
+<label for="javascript">JavaScript</label><br>
+<input type="checkbox" id="dose1" name="dose1" value="dose1">
+<label for="vehicle1"> dose1</label>
+<input type="checkbox" id="dose2" name="dose2" value="dose2">
+<label for="vehicle2">dose2</label>
+<input type="checkbox" id="booster" name="booster" value="booster">
+<label for="vehicle3">booster</label> <br>
+<input type="submit" value="Submit">
+<input type="submit" value="reset">
+</form>
+</div>
+<hr>
+<!-- this div contains the multimedia files tag -->
+7
+<div>
+<video width="320" height="240" controls>
+<source src="earth.mp4" type="video/mp4">
+</video>
+<audio controls>
+<source src="audio.mp3" type="audio/mpeg">
+</audio>
+</div>
+</body>
+</html>
+3. Demonstrate inline, embedded and external CSS with a simple HTML program to show styling basics
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inline CSS</title>
+</head>
+<body>
+<p style = "color:#009900; font-size:50px;
+font-style:italic; text-align:center;">
+DSCE Web Programming
+</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internal CSS</title>
+8
+<style>
+.main {
+text-align:center;
+}
+.DSCE {
+color:#009900;
+font-size:50px;
+font-weight:bold;
+}
+. example {
+font-style:bold;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<div class = "main">
+<div class ="DSCE"> DSCE Web Programming </div>
+<div class ="example">
+Embedded CSS for web programming
+</div>
+</div>
+</body>
+</html>
+body {
+background-color:powderblue;
+}
+.main {
+text-align:center;
+}
+.DSCE {
+9
+color:#009900;
+font-size:50px;
+font-weight:bold;
+}
+#example {
+font-style:bold;
+font-size:20px;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="exampleFile.css"/>
+</head>
+<body>
+<div class = "main">
+<div class ="DSCE">Check out the external CSS</div>
+<div id ="example">
+A computer science portal for geeks
+</div>
+</div>
+</body>
+</html>
+10
+4. Create a webpage with header, footer, navigation menu, content and main menu with CSS and HTML 
+along with responsive tags
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+font-family: Arial;
+padding: 10px;
+background: #f1f1f1;
+}
+/* Header/Blog Title */
+.header {
+padding: 30px;
+text-align: center;
+background: white;
+11
+}
+.header h1 {
+font-size: 50px;
+}
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: #333;
+}
+/* Style the topnav links */
+.topnav a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+/* Change color on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+float: left;
+width: 75%;
+}
+/* Right column */
+.rightcolumn {
+12
+float: left;
+width: 25%;
+background-color: #f1f1f1;
+padding-left: 20px;
+}
+/* Fake image */
+.fakeimg {
+background-color: #aaa;
+width: 100%;
+padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+/* Footer */
+.footer {
+padding: 20px;
+text-align: center;
+background: #ddd;
+margin-top: 20px;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of
+13
+each other instead of next to each other */
+@media screen and (max-width: 800px) {
+.leftcolumn, .rightcolumn {
+width: 100%;
+padding: 0;
+}
+}
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top
+of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+.topnav a {
+float: none;
+width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>My Website</h1>
+<p>Resize the browser window to see the effect.</p>
+</div>
+<div class="topnav">
+<a href="#">Link</a>
+<a href="#">Link</a>
+<a href="#">Link</a>
+<a href="#" style="float:right">Link</a>
+</div>
+<div class="row">
+<div class="leftcolumn">
+<div class="card">
+14
+<h2>TITLE HEADING</h2>
+<h5>Title description, Dec 7, 2017</h5>
+<div class="fakeimg" style="height:200px;">Image</div>
+<p>Some text..</p>
+<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco.</p>
+</div>
+<div class="card">
+<h2>TITLE HEADING</h2>
+<h5>Title description, Sep 2, 2017</h5>
+<div class="fakeimg" style="height:200px;">Image</div>
+<p>Some text..</p>
+<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+exercitation ullamco.</p>
+</div>
+</div>
+<div class="rightcolumn">
+<div class="card">
+<h2>About Me</h2>
+<div class="fakeimg" style="height:100px;">Image</div>
+<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+</div>
+<div class="card">
+<h3>Popular Post</h3>
+<div class="fakeimg"><p>Image</p></div>
+<div class="fakeimg"><p>Image</p></div>
+<div class="fakeimg"><p>Image</p></div>
+</div>
+<div class="card">
+15
+<h3>Follow Me</h3>
+<p>Some text..</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<h2>Footer</h2>
+</div>
+</body>
+</html>
+5. Write a JavaScript to design a simple calculator to perform the following operations: sum, product, 
+difference and quotient. 
+<!DOCTYPE
+HTML> <html>
+<head>
+<style>
+table, td, th
+{
+border: 1px solid black;
+width: 33%;
+text-align: center;
+background-color: DarkGray;
+border-collapse:collapse;
+}
+16
+table { margin: auto; }
+input { text-align:right; }
+</style>
+<script type="text/javascript">
+function calc(clicked_id)
+{
+Var val1 =
+parseFloat(document.getElementById("value1").value);
+Web Technology Lab With Mini Project – 15CSL77 2018-2019
+Dept. of CSE, MSEC Page 5
+var val2 =
+parseFloat(document.getElementById("value2").value);
+if(isNaN(val1)||isNaN(val2))
+alert("ENTER VALID NUMBER");
+else if(clicked_id=="add")
+document.getElementById("answer").value=val1+val
+2;
+else if(clicked_id=="sub")
+document.getElementById("answer").value=val1-
+val2;
+else if(clicked_id=="mul")
+document.getElementById("answer").value=val1*val2;
+17
+else if(clicked_id=="div")
+document.getElementById("answer").value=val1/val2;
+}
+function cls()
+{
+value1.value="0";
+value2.value="0";
+answer.value="";
+}
+</script>
+</head>
+<body>
+<table>
+<tr><th colspan="4"> SIMPLE CALCULATOR </th></tr>
+<tr><td>value1</td><td><input type="text" id="value1"
+value="0"/></td> <td>value2</td><td><input type="text" id="value2"
+value="0"/> </td></tr> <tr><td><input type="button" value="Addition"
+id = "add" onclick="calc(this.id)"/></td>
+<td><input type="button" value="Subtraction" id = "sub"
+onclick="calc(this.id)"/></td>
+<td><input type="button" value="Multiplication" id = "mul"
+Web Technology Lab With Mini Project – 15CSL77 2018-2019
+18
+Dept. of CSE, MSEC Page 6
+onclick="calc(this.id)"/></td>
+<td><input type="button" value="Division" id ="div"
+onclick="calc(this.id)"/></td></tr>
+<tr><td>Answer:</td><td> <input type="text" id="answer" value=""
+disabled/></td>
+<td colspan="2"><input type="button" value="CLEAR ALL"
+onclick="cls()"/></td> </tr>
+</table>
+</body>
+</html>
+6. Design signup form to validate username, password, and phone numbers etc. using Java script
+<body>
+<h1 style="text-align: center;">REGISTRATION FORM</h1>
+<form name="RegForm" onsubmit="return PROGRAM6FUNC()" method="post">
+<p>Name: <input type="text"
+size="65" name="Name" /></p>
+<br />
+<p>Address: <input type="text"
+size="65" name="Address" />
+</p>
+19
+<br />
+<p>E-mail Address: <input type="text"
+size="65" name="EMail" /></p>
+<br />
+<p>Password: <input type="text"
+size="65" name="Password" /></p>
+<br />
+<p>Telephone: <input type="text"
+size="65" name="Telephone" /></p>
+<br />
+<p>
+SELECT YOUR COURSE
+<select type="text" value="" name="Subject">
+<option>BTECH</option>
+<option>BBA</option>
+<option>BCA</option>
+<option>B.COM</option>
+<option>BE</option>
+</select>
+</p>
+<br />
+20
+<br />
+<p>Comments: <textarea cols="55"
+name="Comment"> </textarea></p>
+<p>
+<input type="submit"
+value="send" name="Submit" />
+<input type="reset"
+value="Reset" name="Reset" />
+</p>
+</form>
+</body>
+JAVASCRIPT FILE:
+<script>
+function PROGRAM6FUNC() {
+var name =
+document.forms.RegForm.Name.value;
+var email =
+document.forms.RegForm.EMail.value;
+var phone =
+document.forms.RegForm.Telephone.value;
+var what =
+document.forms.RegForm.Subject.value;
+var password =
+document.forms.RegForm.Password.value;
+var address =
+21
+document.forms.RegForm.Address.value;
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; 
+//Javascript reGex for Email Validation.
+var regPhone=/^\d{10}$/;
+// Javascript reGex for Phone Number validation.
+var regName = /\d+$/g;
+// Javascript reGex for Name validation
+if (name == "" || regName.test(name)) {
+window.alert("Please enter your name properly.");
+name.focus();
+return false;
+}
+if (address == "") {
+window.alert("Please enter your address.");
+address.focus();
+return false;
+}
+if (email == "" || !regEmail.test(email)) {
+window.alert("Please enter a valid e-mail address.");
+email.focus();
+return false;
+}
+if (password == "") {
+alert("Please enter your password");
+password.focus();
+return false;
+}
+22
+if(password.length <6){
+alert("Password should be atleast 6 character long");
+password.focus();
+return false;
+}
+if (phone == "" || !regPhone.test(phone)) {
+alert("Please enter valid phone number.");
+phone.focus();
+return false;
+}
+if (what.selectedIndex == -1) {
+alert("Please enter your course.");
+what.focus();
+return false;
+}
+return true;
+}
+</script>
+CSS File (External):
+<style>
+div {
+box-sizing: border-box;
+width: 100%;
+border: 100px solid black;
+float: left;
+23
+align-content: center;
+align-items: center;
+}
+form {
+margin: 0 auto;
+width: 600px;
+}
+</style>
+7. Create a HTML page with JS to display a new image and text when mouse comes over the existing 
+content in the page
+<html>
+<head>
+<script>
+function bigImg(x)
+{
+x.style.height="480px";
+x.style.width="480px";
+}
+function normalImg(x)
+{
+x.style.height="240px";
+x.style.width="240px";
+}
+</script>
+</head>
+<body>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="Penguins.jpg"
+alt="Smiley" width="120" height="120" />
+<p>The function bigImg() is triggered when the user moves the mouse pointer over the image. This
+24
+function enlarges the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That
+function changes the height and width of the image back to normal.</p>
+</body>
+</html>
+8. Write an HTML page including any required JavaScript that takes a number from text field in the 
+range of 0 to 999 and shows it in words. It should not accept four and above digits, alphabets and 
+special characters.
+<html>
+<head>
+<title>HTML - Convert numbers to words using JavaScript</title>
+<SCRIPT language=Javascript>
+<!--
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : evt.keyCode;
+if (charCode != 46 && charCode > 31
+&& (charCode < 48 || charCode > 57))
+return false;
+return true;
+}
+//-->
+</SCRIPT>
+<script>
+function NumToWord(inputNumber, outputControl)
+{
+var str = new String(inputNumber)
+var splt = str.split("");
+var rev = splt.reverse();
+25
+var once = ['Zero', ' One', ' Two', ' Three', ' Four', ' Five', ' Six', ' Seven', ' Eight', ' Nine'];
+var twos = ['Ten', ' Eleven', ' Twelve', ' Thirteen', ' Fourteen', ' Fifteen', ' Sixteen', '
+Seventeen', ' Eighteen', ' Nineteen'];
+var tens = ['', 'Ten', ' Twenty', ' Thirty', ' Forty', ' Fifty', ' Sixty', ' Seventy', ' Eighty', '
+Ninety'];
+numLength = rev.length;
+var word = new Array();
+var j = 0;
+for (i = 0; i < numLength; i++) {
+switch (i) {
+case 0:
+if ((rev[i] == 0) || (rev[i + 1] == 1)) {
+word[j] = '';
+}
+else {
+word[j] = once[rev[i]];
+}
+word[j] = word[j];
+break;
+case 1:
+aboveTens();
+break;
+case 2:
+if (rev[i] == 0) {
+word[j] = '';
+}
+else if ((rev[i - 1] == 0) || (rev[i - 2] == 0)) {
+word[j] = once[rev[i]] + " Hundred ";
+}
+else {
+word[j] = once[rev[i]] + " Hundred and";
+26
+}
+break;
+default: break;
+}
+j++;
+}
+function aboveTens() {
+if (rev[i] == 0) { word[j] = ''; }
+else if (rev[i] == 1) { word[j] = twos[rev[i - 1]]; }
+else { word[j] = tens[rev[i]]; }
+}
+word.reverse();
+var finalOutput = '';
+for (i = 0; i < numLength; i++) {
+finalOutput = finalOutput + word[i];
+}
+document.getElementById(outputControl).innerHTML = finalOutput;
+}
+</script>
+</head>
+<body>
+<h1>HTML - Convert numbers to words using JavaScript</h1>
+<input id="Text1" type="text" onkeypress="return isNumberKey(event)"
+onkeyup="NumToWord(this.value,'divDisplayWords');" maxlength="3" style="backgroundcolor: 
+#efefef; border: 2px solid #CCCCC; font-size: large" />
+<br /> <br />
+<div id="divDisplayWords" style="font-size: 30; color: Teal; font-family: Arial;">
+</div>
+</body>
+</html>
