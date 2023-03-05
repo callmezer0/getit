@@ -1,0 +1,714 @@
+1.a)C++ Program to show the concept of Data Abstraction 
+#include <iostream>    
+using namespace std;    
+ class Sum    
+{    
+private: int x, y, z; // private variables  
+public:    
+void add()    
+{    
+cout<<"Enter two numbers: ";    
+cin>>x>>y;    
+z= x+y;    
+cout<<"Sum of two number is: "<<z<<endl;    
+}    
+};    
+int main()    
+{    
+Sum sm;    
+sm.add();    
+return 0;    
+}  
+Output:
+Enter two numbers:
+3
+6
+Sum of two number is: 9
+
+1.b) C++ Program to Find All Roots of a Quadratic Equation
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
+cout << "Enter coefficients a, b and c: ";
+    cin >> a >> b >> c;
+    discriminant = b*b - 4*a*c;
+    
+    if (discriminant > 0) {
+        x1 = (-b + sqrt(discriminant)) / (2*a);
+        x2 = (-b - sqrt(discriminant)) / (2*a);
+        cout << "Roots are real and different." << endl;
+        cout << "x1 = " << x1 << endl;
+        cout << "x2 = " << x2 << endl;
+    }
+    
+    else if (discriminant == 0) {
+        cout << "Roots are real and same." << endl;
+        x1 = -b/(2*a);
+        cout << "x1 = x2 =" << x1 << endl;
+    }
+
+    else {
+        realPart = -b/(2*a);
+        imaginaryPart =sqrt(-discriminant)/(2*a);
+        cout << "Roots are complex and different."  << endl;
+        cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
+        cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
+    }
+    return 0;
+}
+Output
+Enter coefficients a, b and c: 4
+5
+1
+Roots are real and different.
+x1 = -0.25
+x2 = -1
+2)a)Find Largest Number Using if...else Statement
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    double n1, n2, n3;
+
+    cout << "Enter three numbers: ";
+    cin >> n1 >> n2 >> n3;
+
+    // check if n1 is the largest number
+    if(n1 >= n2 && n1 >= n3)
+        cout << "Largest number: " << n1;
+
+    // check if n2 is the largest number
+    else if(n2 >= n1 && n2 >= n3)
+        cout << "Largest number: " << n2;
+    
+    // if neither n1 nor n2 are the largest, n3 is the largest
+    else 
+        cout << "Largest number: " << n3;
+  
+    return 0;
+}
+
+Output:
+Enter three numbers: 2.3
+8.3
+-4.2
+Largest number: 8.3
+
+2)b)C++ program to overload sum() function
+// C++ program to overload sum() function
+#include <iostream>
+using namespace std;
+// Function with 2 int parameters
+int sum(int num1, int num2) {
+    return num1 + num2;
+}
+// Function with 2 double parameters
+double sum(double num1, double num2) {
+    return num1 + num2;
+}
+// Function with 3 int parameters
+int sum(int num1, int num2, int num3) {
+    return num1 + num2 + num3;
+}
+int main() {
+    // Call function with 2 int parameters
+    cout << "Sum 1 = " << sum(5, 6) << endl;
+    // Call function with 2 double parameters
+    cout << "Sum 2 = " << sum(5.5, 6.6) << endl;
+    // Call function with 3 int parameters
+    cout << "Sum 3 = " << sum(5, 6, 7) << endl;
+    return 0;
+}
+        Output
+Sum 1 = 11
+Sum 2 = 12.1
+Sum 3 = 18
+3)a)C++ program to demonstrate inheritance
+// C++ program to demonstrate inheritance
+#include <iostream>
+using namespace std;
+// base class
+class Animal {
+   public:
+    void eat() {
+        cout << "I can eat!" << endl;
+    }
+
+    void sleep() {
+        cout << "I can sleep!" << endl;
+    }
+};
+// derived class
+class Dog : public Animal {
+    public:
+    void bark() {
+        cout << "I can bark! Woof woof!!" << endl;
+    }
+};
+int main() {
+    // Create object of the Dog class
+    Dog dog1;
+
+    // Calling members of the base class
+    dog1.eat();
+    dog1.sleep();
+
+    // Calling member of the derived class
+    dog1.bark();
+
+    return 0;
+}
+
+Output:
+I can eat!
+I can sleep!
+I can bark! Woof woof!!
+  
+3)b)Write a C++ Program that illustrate multiple inheritance.  
+#include <iostream>
+#include <cstdio>
+using namespace std;    
+class student
+{
+protected: int rno,m1,m2;
+public:
+void get()
+{
+cout<<"Enter the Roll no :";
+cin>>rno;
+cout<<"Enter the two marks :";
+cin>>m1>>m2;
+}
+};
+class sports
+{
+protected:
+int sm; // sm = Sports mark
+public:
+void getsm()
+{
+cout<<"\nEnter the sports mark :";
+cin>>sm;
+}
+};
+class statement:public student,public sports
+{
+int tot,avg;
+public:
+void display()
+{
+tot=(m1+m2+sm);
+avg=tot/3;
+cout<<"\n\n\tRoll No : "<<rno<<"\n\tTotal : "<<tot;
+cout<<"\n\tAverage : "<<avg;
+}
+};
+int main()
+{
+//clrscr();
+statement obj;
+obj.get();
+obj.getsm();
+obj.display();
+//getch();
+return 0;
+}
+Output:
+Enter the Roll no: 100
+Enter two marks
+90
+80
+Enter the Sports Mark: 90
+Roll No: 100
+Total : 260
+Average: 86.66
+
+4)a)Write a program to access members of a STUDENT class using pointer to object members
+#include<iostream>
+#include <cstdio>
+using namespace std;    
+class student
+{
+int rollno;
+char name[50];
+public:
+void getdata();
+void print();
+};
+void student::getdata()
+{
+cout<<"Enter roll number"<<endl;
+cin>>rollno;
+cout<<"Enter Name ";
+cin>>name;
+}
+void student::print()
+{
+cout<<"Name :"<<name<<endl;
+cout<<"Roll no:"<<rollno<<endl;
+}
+int main()
+{
+student a;
+a.getdata();
+a.print();
+cout<<"Pointer to class\n";
+student *ptr;
+ptr=&a;
+ptr->print();
+}
+Output:
+Enter roll number
+123
+Enter Name jayapal
+Name :jayapal
+Roll no:123
+Pointer to class
+Name :jayapal
+Roll no:123
+
+4)b)C++ Program to check whether number is Prime or not
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i, chk=0, j;
+    cout<<"Prime Numbers Between 1 to 100 are:\n)";
+    for(i=1; i<=100; i++)
+    {
+        for(j=2; j<i; j++)
+        {
+           if(i%j==0)
+           {
+               chk++;
+               break;
+           }
+        }
+        if(chk==0 && i!=1)
+            cout<<i<<endl;
+        chk = 0;
+    }
+    cout<<endl;
+    return 0;
+}
+Output:
+Prime Numbers Between 1 to 100 are:
+2 3 5 7 11 13 17 19 23 29  31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+
+5)a)Write a Program to generate Fibonacci Series by using Constructor to initialize the Data Members.
+#include<iostream>
+using namespace std;
+class fibonacci{
+int f0,f1,f;
+public:
+fibonacci()
+{
+f0=0;
+f1=1;
+}
+void series(int n)
+{
+int count=0;
+f0=0;
+f1=1;
+while(count<n)
+{
+cout<<f0<<"\t";
+count++;
+f=f0+f1;
+f0=f1;
+f1=f;
+}
+}
+};
+int main()
+{
+Fibonacci obj;
+int terms;
+cout<<"Enter How many terms to be printed:";
+cin>>terms;
+obj.series(terms);
+return 0;
+}
+Output:
+Enter How many terms to be printed:5
+0 1 1 2 3
+5)b)C++ Program to Calculate H.C.F using recursion
+#include <iostream>
+using namespace std;
+
+int hcf(int n1, int n2);
+
+int main()
+{
+   int n1, n2;
+
+   cout << "Enter two positive integers: ";
+   cin >> n1 >> n2;
+
+   cout << "H.C.F of " << n1 << " & " <<  n2 << " is: " << hcf(n1, n2);
+
+   return 0;
+}
+
+int hcf(int n1, int n2)
+{
+    if (n2 != 0)
+       return hcf(n2, n1 % n2);
+    else 
+       return n1;
+}
+
+
+Output:
+Enter two positive integers: 366 60
+H.C.F of 366 and 60 is: 6
+
+6)a)C++ Program to Add Two Matrix Using Multi-dimensional Arrays
+#include <iostream>
+using namespace std;
+int main()
+{
+    int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+    cout << "Enter number of rows (between 1 and 100): ";
+    cin >> r;
+    cout << "Enter number of columns (between 1 and 100): ";
+    cin >> c;
+
+    cout << endl << "Enter elements of 1st matrix: " << endl;
+
+    // Storing elements of first matrix entered by user.
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element a" << i + 1 << j + 1 << " : ";
+           cin >> a[i][j];
+       }
+
+    // Storing elements of second matrix entered by user.
+    cout << endl << "Enter elements of 2nd matrix: " << endl;
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element b" << i + 1 << j + 1 << " : ";
+           cin >> b[i][j];
+       }
+
+    // Adding Two matrices
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    // Displaying the resultant sum matrix.
+    cout << endl << "Sum of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << sum[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+
+    return 0;
+}
+
+Output:
+Enter number of rows (between 1 and 100): 2
+Enter number of columns (between 1 and 100): 2
+
+Enter elements of 1st matrix:
+Enter element a11: -4
+Enter element a12: 5
+Enter element a21: 6
+Enter element a22: 8
+
+Enter elements of 2nd matrix:
+Enter element b11: 3
+Enter element b12: -9
+Enter element b21: 7
+Enter element b22: 2
+
+Sum of two matrix is:
+-1   -4
+13   10
+
+6)b)C++ program to Sort Words in Dictionary Order
+#include<iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+    string str[10], temp;
+    cout << "Enter 10 words: " << endl;
+    for(int i = 0; i < 10; ++i)
+    {
+      getline(cin, str[i]);
+    }
+    // Use Bubble Sort to arrange words
+    for (int i = 0; i < 9; ++i) {
+        for (int j = 0; j < 9 - i; ++j) {
+            if (str[j] > str[j + 1]) {
+                temp = str[j];
+                str[j] = str[j + 1];
+                str[j + 1] = temp;
+            }
+        }
+    }
+
+    cout << "In lexicographical order: " << endl;
+
+    for(int i = 0; i < 10; ++i)
+    {
+       cout << str[i] << endl;
+    }
+    return 0;
+}
+Output:
+Enter 10 words: 
+C 
+C++
+Java
+Python
+Perl
+R
+Matlab
+Ruby
+JavaScript
+PHP
+In lexicographical order: 
+C
+C++
+Java
+JavaScript
+Matlab
+PHP
+Perl
+Python
+R
+Ruby
+
+
+
+
+
+7)a)Write a C++ program containing a possible exception use a try block to throw it and a catch block to handle it properly. 
+#include<iostream>
+#include <cstdio>
+using namespace std;
+int main()
+{
+int x = -1;
+cout<< "Before try \n";
+try
+{
+cout<< "Inside try \n";
+if (x < 0)
+{
+throw x;
+cout<< "After throw (Never executed) \n";
+}
+}
+catch (int x )
+{
+cout<< "Exception Caught \n";
+}
+cout<< "After catch (Will be0 executed) \n";
+return 0;
+}
+Output:
+Before try
+Inside try
+Exception Caught
+After catch (Will be executed)
+
+7)b)Write a C++ program to demonstrate the catching of all exceptions. 
+#include<iostream>
+#include <cstdio>
+using namespace std;
+void test(int x)
+{
+try
+{
+if(x>0)
+throw x;
+else
+throw 'x';
+}
+catch(int x)
+{
+cout<<"Catch a integer and that integer is:"<<x;
+}
+catch(char x)
+{
+cout<<"Catch a character and that character is:"<<x;
+}
+}
+int main()
+{
+//clrscr();
+cout<<"Testing multiple catches\n:";
+test(10);
+test(0);
+//getch();
+return 0;
+
+}
+Output:
+Testing multiple catches
+Catch a integer and that integer is: 10
+Catch a character and that character is: x
+
+8)a) Program to demonstrate call by value, call by address
+// Using call by value.
+#include<iostream>
+#include <cstdio>
+using namespace std;
+void interchange(int number1, int number2);
+int main()
+{
+int num1=50,num2=70;
+//clrscr();
+interchange(num1,num2);
+cout<<"\n Number1:"<<num1<<"\n Number2:"<<num2;
+//getch();
+return 0;
+}
+void interchange(int number1,int number2)
+{
+int temp;
+temp=number1;
+number1=number2;
+number2=temp;
+}
+
+Output:
+Number1=50
+Number2=70
+
+8)b) Program to demonstrate call by Reference
+#include<iostream>
+#include <cstdio>
+using namespace std;
+void interchange(int *num1,int *num2);
+int main()
+{
+int num1=50,num2=70;
+//clrscr();
+interchange(&num1,&num2);
+cout<<"\n Number1:"<<num1<<"\n Number2:"<<num2;
+//getch();
+return 0;
+}
+void interchange(int *num1,int *num2)
+{
+int temp;
+temp=*num1;
+*num1=*num2;
+*num2=temp;
+}
+
+Output
+Number1: 70
+Number2: 50
+
+9)a)C++ Program to Store and Display Information Using Structure
+ #include <iostream>
+using namespace std;
+
+struct student
+{
+    char name[50];
+    int roll;
+    float marks;
+} s[10];
+
+int main()
+{
+    cout << "Enter information of students: " << endl;
+
+    // storing information
+    for(int i = 0; i < 10; ++i)
+    {
+        s[i].roll = i+1;
+        cout << "For roll number" << s[i].roll << "," << endl;
+
+        cout << "Enter name: ";
+        cin >> s[i].name;
+
+        cout << "Enter marks: ";
+        cin >> s[i].marks;
+
+        cout << endl;
+    }
+
+    cout << "Displaying Information: " << endl;
+    // Displaying information
+    for(int i = 0; i < 10; ++i)
+    {
+        cout << "\nRoll number: " << i+1 << endl;
+        cout << "Name: " << s[i].name << endl;
+        cout << "Marks: " << s[i].marks << endl;
+    }
+    return 0;
+}
+Output:
+Enter information of students: 
+For roll number1,
+Enter name: Tom
+Enter marks: 98
+For roll number2,
+Enter name: Jerry
+Enter marks: 89
+.Displaying Information:
+Roll number: 1
+Name: Tom
+Marks: 98
+
+  
+
+9)b)Write a C++ program to illustrate the order of execution of constructors
+and destructors.
+
+#include <iostream>    
+using namespace std;
+class Base
+{
+public:
+Base ( )
+{
+cout<< "Inside Base constructor" <<endl;
+}
+~Base ( )
+{
+cout<< "Inside Base destructor" <<endl;
+}
+};
+class Derived : public Base
+{
+public:
+Derived ( )
+{
+cout<< "Inside Derived constructor" <<endl;
+}
+~Derived ( )
+{
+cout<< "Inside Derived destructor" <<endl;
+}
+};
+int main( )
+{
+Derived x;
+return 0;
+}
+
+Output:
+Inside Base constructor
+Inside Derived constructor
+Inside Derived destructor
+Inside Base destructor
+
